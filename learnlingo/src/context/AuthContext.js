@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { auth } from "../services/firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import { AuthContext } from "./AuthContext";
+
+// Context'i dışa aktarıyoruz (Hook içinde kullanabilmek için)
+export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
