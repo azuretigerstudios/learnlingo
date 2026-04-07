@@ -45,3 +45,4 @@ const RegisterForm = ({ closeModal }) => {
     </form>
   );
 };
+export default RegisterForm;
